@@ -1,0 +1,9 @@
+title: Clear Share
+description: Support and privacy information for Clear Share by Softutopia.
+lang: en
+url: https://onlinefaize.github.io
+baseurl: /clear-share-support
+markdown: kramdown
+kramdown:
+  input: GFM
+  parse_block_html: true
