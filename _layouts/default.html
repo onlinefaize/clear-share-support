@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | escape }}" dir="{{ page.dir | default: 'ltr' | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description | escape }}">
+  <title>{{ page.title | escape }}</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f5f2eb;--paper:#fffdf9;--ink:#1c2822;--muted:#64685d;--accent:#795a0b;--line:#e2e1d7}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-wrap:anywhere}
+    header,main,footer{width:min(900px,calc(100% - 32px));margin-inline:auto}header{padding-block:28px 20px;border-bottom:1px solid var(--line)}.brand{font-size:24px;font-weight:750;text-decoration:none;color:var(--ink)}.operator{color:var(--muted);margin-block:2px 14px}
+    nav{display:flex;flex-wrap:wrap;gap:8px 22px}nav a{min-height:44px;display:inline-flex;align-items:center}a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px;border-radius:2px}a[href^="mailto:"]{direction:ltr;unicode-bidi:isolate;display:inline-block}
+    main{margin-block:24px;padding:clamp(20px,4vw,44px);background:var(--paper);border-radius:16px}h1,h2,h3{line-height:1.4;letter-spacing:-.015em}h1{font-size:clamp(27px,4.5vw,36px);margin-block:0 24px}h2{font-size:25px;margin-block:40px 16px}h3{font-size:20px;margin-block:28px 12px}p{margin-block:0 18px}ul,ol{padding-inline-start:1.5em}li{margin-block:8px}section,[id]{scroll-margin-top:24px}[dir="rtl"]{text-align:start}[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:normal}footer{padding-block:0 32px;color:var(--muted);font-size:15px}
+    @media(prefers-color-scheme:dark){:root{--bg:#141c17;--paper:#232e26;--ink:#f5f2e9;--muted:#b6c2b5;--accent:#efca76;--line:#3a493d}}
+    @media print{body{background:white;color:black}header,main,footer{width:100%;margin:0;padding:12px 0}main{background:white}nav{display:none}a{color:inherit}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./index.html" dir="ltr">Clear Share</a>
+    <p class="operator" dir="ltr">Softutopia</p>
+    <nav aria-label="Support and privacy languages">
+      <a href="./index.html">Support / <span lang="ar" dir="rtl">الدعم</span></a>
+      <a href="./privacy-policy.en.html" lang="en" dir="ltr">Privacy in English</a>
+      <a href="./privacy-policy.ar.html" lang="ar" dir="rtl">سياسة الخصوصية بالعربية</a>
+    </nav>
+  </header>
+  <main lang="{{ page.lang | default: site.lang | escape }}" dir="{{ page.dir | default: 'ltr' | escape }}">{{ content }}</main>
+  <footer><span dir="ltr">© 2026 Softutopia · <a href="mailto:contact@softutopia.com">contact@softutopia.com</a></span></footer>
+</body>
+</html>
